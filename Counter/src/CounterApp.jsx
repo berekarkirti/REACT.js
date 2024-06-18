@@ -13,6 +13,7 @@ function CounterApp(){
                 <button onClick={()=>setCounter(0)}                             style={{backgroundColor:'#ffff',color:'teal',padding:'10px 20px',borderRadius:'8px',fontSize:'19px',border:'none',fontWeight:'600'}}>Reset</button>
                 <button onClick={()=>setCounter(Counter > 0 ? Counter - 1 : 0)} style={{backgroundColor:'#ffff',color:'teal',padding:'10px 20px',borderRadius:'8px',fontSize:'19px',border:'none',fontWeight:'600'}}>Decreament</button>
               </div>
+
            </div>
         </div>
     )

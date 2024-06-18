@@ -4,7 +4,7 @@ function CounterApp(){
     let [Counter , setCounter] = useState(0);
     return(
         <div className="App">
-           <div style={{boxShadow:'8px 15px 25px 3px rgba(0,0,0,0.40)',border:'3px white',margin:'auto',marginTop:'10%',borderRadius:'8px',width:'500px',height:'250px',padding:'50px',backgroundColor:'rgb(0, 128, 128,0.799)',color:'#ffff'}}>
+           <div style={{boxShadow:'8px 15px 25px 3px rgba(0,0,0,0.40)',border:'3px white',margin:'auto',marginTop:'10%',borderRadius:'8px',width:'500px',height:'300px',padding:'50px',backgroundColor:'rgb(0, 128, 128,0.799)',color:'#ffff'}}>
               <h1>Counter</h1>
               <h2 style={{fontSize:'55px',fontWeight:'600'}}>{Counter}</h2>
 

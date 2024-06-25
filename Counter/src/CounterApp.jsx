@@ -46,7 +46,7 @@ export default function App() {
   }
 
   return (
-    <div style={{boxShadow:'8px 15px 25px 3px rgba(0,0,0,0.40)',border:'3px white',margin:'auto',marginTop:'7%',borderRadius:'8px',width:'500px',height:'350px',padding:'50px',backgroundColor:'rgb(0, 128, 128,0.799)',color:'#ffff'}}>
+    <div style={{boxShadow:'8px 15px 25px 3px rgba(0,0,0,0.40)',margin:'auto',marginTop:'7%',borderRadius:'8px',width:'500px',height:'350px',padding:'50px',backgroundColor:'rgb(0, 128, 128,0.799)',color:'#ffff',border:'4px dashed white',}}>
       <h2>Welcome to Counter 2.0</h2>
        <div className="btn-group">
           <button style={{backgroundColor:'#ffff',color:'teal',padding:'10px 12px',borderRadius:'8px',fontSize:'21px',border:'none',fontWeight:'600'}} disabled={count == 0} onClick={() => setcount(count - 1)} >-1</button>

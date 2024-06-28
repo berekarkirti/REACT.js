@@ -17,7 +17,7 @@ function App() {
       <button onClick={fetchData}>GET POSTS</button>
       <hr />
       {posts.map((post) => (
-        <div className="post" key={post.id} style={{}}>
+        <div className="post" key={post.id}>
           <h2>{post.title}</h2>
           <p>{post.body}</p>
         </div>

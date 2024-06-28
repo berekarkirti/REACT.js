@@ -28,19 +28,15 @@ export default function App() {
 
   function CheckPrime() {
     let fact = 0;
-    for (let i = 1; i <= count; i++)
-    {
-      if (count % i == 0) 
-      {
+    for (let i = 1; i <= count; i++) {
+      if (count % i == 0) {
         fact++;
       }
     }
-    if (fact   == 2) 
-    {
+    if (fact == 2) {
       return "true";
-    } 
-    else 
-    {
+    }
+    else {
       return "false";
     }
   }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./StudentForm.css";
 
-
 const StudentForm = () => {
     const [formData, setFormData] = useState({
         name: "",
@@ -22,7 +21,6 @@ const StudentForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
-
         setFormData({
             name: "",
             email: "",
@@ -36,9 +34,7 @@ const StudentForm = () => {
         <div className="main">
             <h2 className="heading">Student Form</h2>
             <form className="form" onSubmit={handleSubmit}>
-
-        {/*-------------------------------------------- Name Input --------------------------------------------*/}
-                <label className="label" type="text">Name:</label>
+                <label className="label">Name:</label>
                 <input
                     onChange={handleChange}
                     value={formData.name}
@@ -48,8 +44,7 @@ const StudentForm = () => {
                     className="input"
                 />
 
-        {/*-------------------------------------------- Email Input --------------------------------------------*/}
-                <label className="label" type="email">Email:</label>
+                <label className="label">Email:</label>
                 <input
                     onChange={handleChange}
                     value={formData.email}
@@ -59,8 +54,7 @@ const StudentForm = () => {
                     className="input"
                 />
 
-        {/*-------------------------------------------- Password Input --------------------------------------------*/}
-                <label className="label" type="password">Password:</label>
+                <label className="label">Password:</label>
                 <input
                     onChange={handleChange}
                     value={formData.password}
@@ -70,12 +64,12 @@ const StudentForm = () => {
                     className="input"
                 />
 
-        {/*-------------------------------------------- Select Grade --------------------------------------------*/}
-                <label className="label" type="gradeSelect">Select your grade:</label>
+                <label className="label">Select your grade:</label>
                 <select
-                    name="selectedGrade"
+                    id="gradeSelect"
                     value={formData.selectedGrade}
                     onChange={handleChange}
+                    name="selectedGrade"
                     className="select"
                 >
                     <option value="">Select</option>
@@ -85,7 +79,6 @@ const StudentForm = () => {
                     <option value="Senior">Senior</option>
                 </select>
 
-        {/*-------------------------------------------- Gender Radio Buttons --------------------------------------------*/}
                 <div className="radioGroup">
                     <label className="label">Gender:</label>
                     <label>
@@ -112,7 +105,6 @@ const StudentForm = () => {
                     </label>
                 </div>
 
-        {/*-------------------------------------------- Submit Button --------------------------------------------*/}
                 <button type="submit" className="button">Submit</button>
             </form>
         </div>

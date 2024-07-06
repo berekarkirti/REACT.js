@@ -3,32 +3,33 @@ import "./StudentForm.css";
 
 
 const StudentForm = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [selectedGrade, setSelectedGrade] = useState("");
-    const [gender, setGender] = useState("");
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        password: "",
+        selectedGrade: "",
+        gender: "",
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const userData = {
-            name,
-            email,
-            password,
-            selectedGrade,
-            gender,
-        };
-        console.log(userData);
+        console.log(formData);
 
-        setName("");
-        setEmail("");
-        setPassword("");
-        setSelectedGrade("");
-        setGender("");
-    };
-
-    const handleGradeChange = (e) => {
-        setSelectedGrade(e.target.value);
+        setFormData({
+            name: "",
+            email: "",
+            password: "",
+            selectedGrade: "",
+            gender: "",
+        });
     };
 
     return (
@@ -36,45 +37,45 @@ const StudentForm = () => {
             <h2 className="heading">Student Form</h2>
             <form className="form" onSubmit={handleSubmit}>
 
-        {/*-------------------------------------------- Name --------------------------------------------*/}
+        {/*-------------------------------------------- Name Input --------------------------------------------*/}
                 <label className="label" type="text">Name:</label>
                 <input
-                    onChange={(e) => setName(e.target.value)}
-                    value={name}
+                    onChange={handleChange}
+                    value={formData.name}
                     type="text"
                     placeholder="Enter Your Name"
                     name="name"
                     className="input"
                 />
 
-        {/*-------------------------------------------- Email --------------------------------------------*/}
+        {/*-------------------------------------------- Email Input --------------------------------------------*/}
                 <label className="label" type="email">Email:</label>
                 <input
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
+                    onChange={handleChange}
+                    value={formData.email}
                     type="email"
                     placeholder="Enter Your Email"
                     name="email"
                     className="input"
                 />
 
-        {/*-------------------------------------------- Password --------------------------------------------*/}
+        {/*-------------------------------------------- Password Input --------------------------------------------*/}
                 <label className="label" type="password">Password:</label>
                 <input
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
+                    onChange={handleChange}
+                    value={formData.password}
                     type="password"
                     placeholder="Enter Your Password"
                     name="password"
                     className="input"
                 />
 
-        {/*-------------------------------------------- Select your grade --------------------------------------------*/}
+        {/*-------------------------------------------- Select Grade --------------------------------------------*/}
                 <label className="label" type="gradeSelect">Select your grade:</label>
                 <select
-                    id="gradeSelect"
-                    value={selectedGrade}
-                    onChange={handleGradeChange}
+                    name="selectedGrade"
+                    value={formData.selectedGrade}
+                    onChange={handleChange}
                     className="select"
                 >
                     <option value="">Select</option>
@@ -84,7 +85,7 @@ const StudentForm = () => {
                     <option value="Senior">Senior</option>
                 </select>
 
-        {/*-------------------------------------------- Gender --------------------------------------------*/}
+        {/*-------------------------------------------- Gender Radio Buttons --------------------------------------------*/}
                 <div className="radioGroup">
                     <label className="label">Gender:</label>
                     <label>
@@ -92,8 +93,8 @@ const StudentForm = () => {
                             type="radio"
                             name="gender"
                             value="male"
-                            onChange={(e) => setGender(e.target.value)}
-                            checked={gender === "male"}
+                            onChange={handleChange}
+                            checked={formData.gender === "male"}
                             className="radio"
                         />
                         Male
@@ -103,15 +104,15 @@ const StudentForm = () => {
                             type="radio"
                             name="gender"
                             value="female"
-                            onChange={(e) => setGender(e.target.value)}
-                            checked={gender === "female"}
+                            onChange={handleChange}
+                            checked={formData.gender === "female"}
                             className="radio"
                         />
                         Female
                     </label>
                 </div>
 
-        {/*-------------------------------------------- Submit --------------------------------------------*/}
+        {/*-------------------------------------------- Submit Button --------------------------------------------*/}
                 <button type="submit" className="button">Submit</button>
             </form>
         </div>
@@ -119,3 +120,31 @@ const StudentForm = () => {
 }
 
 export default StudentForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// setFormData is a function provided by the useState hook to update the state variable formData.
+// (prevState) or (prevData) is a parameter name conventionally used to represent the previous state or data (formData in this case).
+// Inside setFormData, you provide a function that receives prevState as an argument.
+// This function returns a new state object based on prevState, spreading its properties (...prevState) and updating the property corresponding to name with the new value.

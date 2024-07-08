@@ -1,0 +1,49 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 5%;
+}
+
+.paragraph {
+    font-size: 20px;
+    text-align: left;
+    color: rgb(140, 140, 140);
+    margin-top: 5%;
+}
+
+.btn {
+    font-size: 16px;
+}
+
+.icons {
+    text-align: left;
+}
+
+.icons i {
+    font-size: 1.5rem;
+}
+
+.social {
+    color: rgba(93, 93, 93, 0.847);
+    transition: all ease-in-out 0.8s;
+}
+
+.social:hover {
+    color: rgba(73, 73, 73, 0.868);
+}
+
+
+img {
+    width: 100%;
+}

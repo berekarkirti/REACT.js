@@ -103,6 +103,17 @@ const StudentForm = () => {
                         />
                         Female
                     </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                            onChange={handleChange}
+                            checked={formData.gender === "other"}
+                            className="radio"
+                        />
+                        Other
+                    </label>
                 </div>
 
                 <button type="submit" className="button">Submit</button>

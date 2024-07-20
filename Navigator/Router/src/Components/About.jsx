@@ -1,3 +1,7 @@
+//Purpose: Provides information about the application
+//-Explains the purpose of the application.
+//-Describes the range of products and user benefits.
+
 import React from 'react';
 import './About.css';
 

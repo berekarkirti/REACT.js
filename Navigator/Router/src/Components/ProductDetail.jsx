@@ -1,3 +1,7 @@
+//Purpose: Displays detailed information about a specific product.
+//-Fetches and displays details of a selected product using its ID.
+//-Redirects to the products page if there's an error fetching data.
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';

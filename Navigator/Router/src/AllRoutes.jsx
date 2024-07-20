@@ -1,3 +1,7 @@
+//Purpose: Defines application routes and integrates private routing.
+//-Uses react-router-dom for client-side routing.
+//-Implements PrivateRoute to protect the Products and ProductDetail pages.
+//-Ensures users must be authenticated to access protected routes.
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';

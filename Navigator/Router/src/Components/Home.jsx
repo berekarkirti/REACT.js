@@ -1,3 +1,6 @@
+// Purpose: Displays a welcome message and introduction.
+// -Renders a welcome message and brief description of the application.
+// -Provides navigation guidance to users.
 import React from 'react';
 import './Home.css';
 

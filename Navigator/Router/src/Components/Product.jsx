@@ -1,3 +1,10 @@
+//Purpose: Displays a paginated list of products.
+//-Fetches product data from a local JSON server.
+//-Implements pagination to navigate through product pages.
+//-Allows users to click on a product image to view detailed information.
+
+
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';

@@ -1,3 +1,8 @@
+//Purpose: Handles user authentication.
+//-Provides a form for users to input email and password.
+//-Uses Axios to authenticate users and store a token in localStorage.
+//-Redirects users to the Products page upon successful login.
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Login.css';

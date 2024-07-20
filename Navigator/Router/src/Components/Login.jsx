@@ -8,22 +8,29 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let userdata = {
+    const userdata = {
       email,
       password
     };
-    axios.post("https://reqres.in/api/login",{
-      method:"POST",
-      Headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify(userdata)
+    axios.post("https://reqres.in/api/login", userdata, {
+      headers: {
+        "Content-Type": "application/json"
+      }
     })
-      .then((res) => {
-        let tokenFromRequest = res.data.token;
-        localStorage.setItem("token", tokenFromRequest);
-      })
-      .catch((err) => console.log(err));
+    .then((res) => {
+      const tokenFromRequest = res.data.token;
+      localStorage.setItem("token", tokenFromRequest);
+      alert("Login successful!");
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Login failed!");
+    });
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    alert("Logout successful!");
   };
 
   return (
@@ -53,8 +60,8 @@ const Login = () => {
         />
 
         <button type="submit" className="login-button">Login</button>
-        <button type="submit" className="logout-button">Logout</button>
       </form>
+      <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>
   );
 };

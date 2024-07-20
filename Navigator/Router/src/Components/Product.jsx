@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Product.css';
 
-function Product() {
+const Product = () => {
     const [products, setProducts] = useState([]);
     const [page, setPage] = useState(1);
-    const totalPages = 5; 
+    const totalPages = 5;
+    const navigate = useNavigate();
 
     const getDataFromServer = () => {
         axios.get(`http://localhost:3000/product?_page=${page}&_limit=8`)
@@ -13,7 +15,7 @@ function Product() {
                 setProducts(res.data);
             })
             .catch((err) => {
-                console.log(err);
+                console.error(err);
             });
     };
 
@@ -33,6 +35,10 @@ function Product() {
         }
     };
 
+    const handleProductClick = (id) => {
+        navigate(`/products/${id}`); // Navigate to the ProductDetail page with product ID
+    };
+
     return (
         <div className="product-container">
             <h1 className="product-heading">Product Page</h1>
@@ -41,7 +47,12 @@ function Product() {
                 {products.map((product) => (
                     <div key={product.id} className="product-card">
                         <h2>{product.id}</h2>
-                        <img src={product.image} alt={product.title} className="product-image" />
+                        <img 
+                            src={product.image} 
+                            alt={product.title} 
+                            className="product-image" 
+                            onClick={() => handleProductClick(product.id)} // Add onClick handler
+                        />
                         <h2 className="product-title">{product.title.substring(0, 30)}</h2>
                         <h3 className="product-price">${product.price}</h3>
                         <h3 className="product-category">{product.category}</h3>
@@ -60,8 +71,6 @@ function Product() {
             </div>
         </div>
     );
-}
+};
 
 export default Product;
-
-

@@ -1,0 +1,195 @@
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+}
+
+.product-search-bar {
+    padding: 10px 20px;
+    margin-right: 20px;
+    width: 450px;
+    border-radius: 5px;
+    border: 1.8px solid teal;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.search-button .fa-search {
+    font-size: 1.2em;
+}
+
+.sort-button {
+    padding: 10px 20px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sort-button:hover {
+    background-color:  rgb(1, 100, 100); ;
+}
+
+
+.product-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.product-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: teal;
+}
+
+.product-divider {
+    margin-bottom: 40px;
+    border: none;
+    border-top: 2px solid teal;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    padding: 6px;
+    margin: auto;
+    text-align: center;
+}
+
+.product-card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid teal;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 20px;
+    color: #343a40;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.product-category {
+    font-size: 16px;
+    color: #adb5bd;
+}
+
+.product-description {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buy-button {
+    padding: 7px 17px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    margin-top: 6%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: rgb(1, 100, 100);
+}
+
+.edit-button {
+    padding: 10px 20px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 6%;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: rgb(1, 100, 100);
+}
+
+.delete-button {
+    padding: 10px 20px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    margin-top: 6%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: rgb(1, 100, 100);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    padding: 6px;
+}
+
+.pagination button {
+    color: teal;
+    padding: 6px 14px;
+    font-size: 16px;
+    border:1px solid teal;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #004d40;
+    color: white;
+    transition: all ease-in 0.5s ;
+}
+
+.pagination span {
+    font-size: 20px;
+    margin: 0 10px;
+    color: teal;
+    margin-top: 7px;
+}
+
+

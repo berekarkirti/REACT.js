@@ -1,0 +1,63 @@
+.container {
+    padding: 20px;
+    width: 1500px;
+    height: 500px;
+    text-align: center;
+    border: 2px solid teal;
+    margin-top: 5%;
+    margin-left: 6%;
+    border-radius: 20px;
+}
+
+.title {
+    color: teal;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image {
+    width: 400px;
+    font-size: 22px;
+    height: 400px;
+
+    border-radius: 8px;
+}
+
+.info {
+    margin-left: 20%;
+    margin-top: 4%;
+    text-align: left;
+    max-width: 500px;
+}
+
+.info h2 {
+    margin: 10px 0;
+    font-size: 25px;
+    margin-bottom: 4%;
+}
+
+.info h3 {
+    margin: 10px 0;
+    font-size: 22px;
+    margin-bottom: 4%;
+}
+
+.info p {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.info button{
+    padding: 10px 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: teal;
+    color: #ffff;
+    border: none;
+}

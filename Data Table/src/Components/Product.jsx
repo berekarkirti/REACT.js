@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 import '../styles/Product.css';
 
 const Product = () => {
     const [products, setProducts] = useState([]);
     const [page, setPage] = useState(1);
-    const totalPages = 5;
-    const navigate = useNavigate();
+    const [selectcategory, setSelectCategory] = useState(null);
+    const [order, setOrder] = useState(null);
+    const [search, setSearch] = useState("");
+    
 
     const getDataFromServer = () => {
-        axios.get(`http://localhost:3000/product?_page=${page}&_limit=8`)
+        axios.get(`http://localhost:8000/product`, {
+            params: {
+                _page: page,
+                _limit: 8,
+                category: selectcategory,
+                _sort: "price",
+                _order: order,
+                q:search,
+            },
+        })
             .then((res) => {
                 setProducts(res.data);
             })
@@ -20,9 +31,20 @@ const Product = () => {
             });
     };
 
+    const handleDelete = (id) => {
+        axios.delete(`http://localhost:8000/product/${id}`)
+            .then((res) => {
+                alert("Product deleted successfully!");
+                getDataFromServer();
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
+
     useEffect(() => {
         getDataFromServer();
-    }, [page]);
+    }, [page, selectcategory, order,search]);
 
     const handlePrevPage = () => {
         if (page > 1) {
@@ -31,13 +53,9 @@ const Product = () => {
     };
 
     const handleNextPage = () => {
-        if (page < totalPages) {
+        if (page < 6) {
             setPage(page + 1);
         }
-    };
-
-    const handleProductClick = (id) => {
-        navigate(`/products/${id}`);
     };
 
     return (
@@ -45,14 +63,27 @@ const Product = () => {
             <div className="product-header">
                 <h1 className="product-heading">Product Page</h1>
                 <div className="product-actions">
-                <FaSearch style={{color:"teal",fontSize:"20px",fontStyle:"normal",marginRight:"8px"}}/>
+                    <FaSearch style={{ color: "teal", fontSize: "20px", fontStyle: "normal", marginRight: "8px" }} />
                     <input
                         type="text"
                         placeholder="Search..."
                         className="product-search-bar"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
                     />
-                    <button className="sort-button">High to Low</button>
-                    <button className="sort-button">Low to High</button>
+                    <select className="filter-select" onChange={(e) => setSelectCategory(e.target.value)}>
+                        <option value="all">All Categories</option>
+                        <option value="men's clothing">Men's</option>
+                        <option value="women's clothing">Women's</option>
+                        <option value="jewelery">Jewelery</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="home and kitchen">Home & Kitchen</option>
+                        <option value="men's shoes">Shoes</option>
+                        <option value="women's accessories">Women's Accessories</option>
+                        <option value="men's accessories">Men's Accessories</option>
+                    </select>
+                    <button className="sort-button" onClick={() => setOrder("asc")}>Low to High</button>
+                    <button className="sort-button" onClick={() => setOrder("desc")}>High to Low</button>
                 </div>
             </div>
             <hr className="product-divider" />
@@ -60,20 +91,23 @@ const Product = () => {
                 {products.map((product) => (
                     <div key={product.id} className="product-card">
                         <h2>{product.id}</h2>
-                        <img
-                            src={product.image}
-                            alt={product.title}
-                            className="product-image"
-                            onClick={() => handleProductClick(product.id)}
-                        />
+                        <Link to={`/productdetail/${product.id}`}>
+                            <img
+                                src={product.image}
+                                alt={product.title}
+                                className="product-image"
+                            />
+                        </Link>
                         <h2 className="product-title">{product.title.substring(0, 30)}</h2>
                         <h3 className="product-price">${product.price}</h3>
                         <h3 className="product-category">{product.category}</h3>
                         <p className="product-description">{product.description.substring(0, 100)}</p>
                         <div className="product-buttons">
                             <button className="buy-button">Buy Now</button>
-                            <button className="edit-button">Edit</button>
-                            <button className="delete-button">Delete</button>
+                            <button className="edit-button">
+                                <Link to={`/edit/${product.id}`} style={{ textDecoration: "none", color: "white" }}>Edit</Link>
+                            </button>
+                            <button className="delete-button" onClick={() => handleDelete(product.id)}>Delete</button>
                         </div>
                     </div>
                 ))}
@@ -81,12 +115,10 @@ const Product = () => {
             <div className="pagination">
                 <button onClick={handlePrevPage} disabled={page === 1}>Prev</button>
                 <span>{page}</span>
-                <button onClick={handleNextPage} disabled={page === totalPages}>Next</button>
+                <button onClick={handleNextPage} disabled={page === 6}>Next</button>
             </div>
         </div>
-
     );
 };
-
 
 export default Product;

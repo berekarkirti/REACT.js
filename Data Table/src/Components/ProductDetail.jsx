@@ -6,10 +6,9 @@ import '../styles/ProductDetail.css';
 const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
-    const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/product/${id}`)
+        axios.get(`http://localhost:8000/product/${id}`)
             .then((res) => {
                 setProduct(res.data);
             })
@@ -17,11 +16,12 @@ const ProductDetail = () => {
                 console.error(err);
                 navigate('/products'); 
             });
-    }, [id, navigate]);
+    }, [id]);
 
     if (!product) {
         return <p>Loading...</p>;
     }
+    
 
     return (
         <div className="container">
@@ -32,6 +32,7 @@ const ProductDetail = () => {
                     <h2><b>Price:</b> ${product.price}</h2>
                     <h3><b>Category:</b> {product.category}</h3>
                     <p><b>Description:</b> {product.description}</p>
+                    <button onClick={handleAddToCart}>Add to Cart</button>
                     <button>Buy Now</button>
                 </div>
             </div>

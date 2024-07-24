@@ -7,7 +7,8 @@ import Login from './Components/Login';
 import ProductDetail from './Components/ProductDetail';
 import Product from './Components/Product';
 import PrivateRoute from './Components/PrivateRoute';
-
+import Addproduct from './Components/Addproduct';
+import Editpage from './Components/Editpage';
 
 const AllRoutes = () => {
   return (
@@ -15,16 +16,14 @@ const AllRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/product"element={
-          <PrivateRoute>
-            <Product />
-          </PrivateRoute>
+      <Route path="/product" element={
+        <PrivateRoute>
+          <Product />
+        </PrivateRoute>
       } />
-      <Route path="/products/:id"element={
-          <PrivateRoute>
-            <ProductDetail />
-          </PrivateRoute>
-      }/>
+      <Route path="/productdetail/:id" element={<ProductDetail />} />
+      <Route path="/addproduct" element={<Addproduct />}/>
+      <Route path="/edit/:id" element={<Editpage />}/>
       <Route path="*" element={<NotFound />} />
     </Routes>
 

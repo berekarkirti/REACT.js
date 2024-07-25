@@ -47,7 +47,7 @@ const Editpage = () => {
     },[])
 
   return (
-    <div className="Addproduct-container">
+    <div className="container">
     <h1 className="Add-product">Edit Product</h1>
     <form className="add-product" onSubmit={(e)=>handlesubmit(e)}>
         <div className="form">

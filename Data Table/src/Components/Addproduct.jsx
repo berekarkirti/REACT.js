@@ -34,7 +34,7 @@ const [formdata,setformdata]=useState(initialstate)
 
     }
     return (
-        <div className="Addproduct-container">
+        <div className="container">
             <h1 className="Add-product">Add Product</h1>
             <form className="add-product" onSubmit={(e)=>handlesubmit(e)}>
                 <div className="form">

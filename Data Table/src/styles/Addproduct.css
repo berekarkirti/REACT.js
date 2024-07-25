@@ -1,4 +1,4 @@
-.Addproduct-container {
+.container {
     background-color: #fff;
     padding: 4rem;
     border: 1px solid teal;
@@ -6,6 +6,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 100%;
+    text-align: left;
     margin: auto;
     margin-top: 10%;
 }

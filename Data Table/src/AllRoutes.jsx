@@ -22,8 +22,12 @@ const AllRoutes = () => {
         </PrivateRoute>
       } />
       <Route path="/productdetail/:id" element={<ProductDetail />} />
-      <Route path="/addproduct" element={<Addproduct />}/>
-      <Route path="/edit/:id" element={<Editpage />}/>
+      <Route path="/addproduct" element={
+        <PrivateRoute>
+        <Addproduct />
+        </PrivateRoute>
+        }/>
+      <Route path="/edit/:id" element={<Editpage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
 

@@ -1,3 +1,9 @@
+// Displays a paginated list of products with options to search, filter, sort, and delete.
+// useState:- Manages state for products, page number, selected category, sort order, and search term.
+// axios:-   Fetches product data from a local JSON server.
+// Search, Filter, and Sort:- Implements features to search products, filter by category, and sort by price.
+// Pagination:- Controls product display across multiple pages.
+// Action Buttons- Includes buttons for viewing product details, editing, and deleting products.
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';

@@ -1,3 +1,5 @@
+// Welcome page for the application.
+// Content:- Displays a welcome message and brief introduction to the product catalog.
 import React from 'react';
 import '../styles/Home.css';
 

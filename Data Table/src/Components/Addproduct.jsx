@@ -1,3 +1,7 @@
+// Provides a form for adding new products.
+// useState:- Manages form state including title, price, description, category, and image URL.
+// axios:- Submits form data to create a new product in the local JSON server.
+// Form:- Contains input fields for all product attributes.
 import React, { useState } from 'react';
 import '../styles/Addproduct.css';
 import axios from 'axios';

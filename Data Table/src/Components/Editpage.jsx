@@ -1,5 +1,10 @@
+// Allows editing of existing product details.
+// useParams:- Retrieves the product ID from the URL parameters.
+// axios:- Fetches existing product data for editing.
+// Form:- Provides a form pre-filled with current product details for updating.
+// Submission:- Updates the product details in the local JSON server.
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import {useParams } from 'react-router-dom'
 import "../styles/Editpage.css"
 import axios from 'axios'
 

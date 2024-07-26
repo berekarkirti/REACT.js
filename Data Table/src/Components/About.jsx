@@ -1,3 +1,5 @@
+// Provides information about the application or organization.
+// Content:- Displays a brief description of the app or organization, including mission, vision, or any other relevant details.
 import React from 'react';
 import '../styles/About.css';
 

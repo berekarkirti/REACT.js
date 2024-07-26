@@ -1,3 +1,6 @@
+// Displays the navigation bar.
+// NavLink:- Creates navigation links with dynamic styling based on the active route. Uses react-router-dom for navigation.
+// Links:-   Includes navigation to Home, About, Product, Login, and Add Product pages. Icons from FontAwesome are used for visual appeal.
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

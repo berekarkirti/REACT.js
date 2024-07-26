@@ -1,3 +1,8 @@
+// Manages user login functionality.
+// useState:- Manages email and password states.
+// axios:- Submits login credentials to authenticate and retrieves a token.
+// Local Storage:- Stores the authentication token for managing user sessions.
+// Logout:- Provides functionality to remove the token and log out.
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/Login.css';

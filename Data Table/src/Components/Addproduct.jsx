@@ -102,4 +102,4 @@ const [formdata,setformdata]=useState(initialstate)
     );
 };
 
-export default Addproduct
+export default Addproduct;

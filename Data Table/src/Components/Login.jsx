@@ -6,11 +6,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/Login.css';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const userdata = {
@@ -22,15 +23,17 @@ const Login = () => {
         "Content-Type": "application/json"
       }
     })
-    .then((res) => {
-      const tokenFromRequest = res.data.token;
-      localStorage.setItem("token", tokenFromRequest);
-      alert("Login successful!");
-    })
-    .catch((err) => {
-      console.error(err);
-      alert("Login failed!");
-    });
+      .then((res) => {
+        const tokenFromRequest = JSON.stringify(res.data.token);
+        localStorage.setItem("token", tokenFromRequest);
+        console.log(tokenFromRequest);
+        alert("Login successful!");
+        navigate('/product')
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Login failed!");
+      });
   };
 
   const handleLogout = () => {

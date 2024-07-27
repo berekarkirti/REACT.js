@@ -16,7 +16,7 @@ const Product = () => {
     const [selectcategory, setSelectCategory] = useState(null);
     const [order, setOrder] = useState(null);
     const [search, setSearch] = useState("");
-    
+    const [debouncedSearch, setDebouncedSearch] = useState("");
 
     const getDataFromServer = () => {
         axios.get(`http://localhost:8000/product`, {
@@ -26,14 +26,14 @@ const Product = () => {
                 category: selectcategory,
                 _sort: "price",
                 _order: order,
-                q:search,
+                q: debouncedSearch,
             },
         })
             .then((res) => {
                 setProducts(res.data);
             })
             .catch((err) => {
-                console.error(err);
+                console.log(err);
             });
     };
 
@@ -44,13 +44,23 @@ const Product = () => {
                 getDataFromServer();
             })
             .catch((err) => {
-                console.error(err);
+                console.log(err);
             });
     };
 
     useEffect(() => {
         getDataFromServer();
-    }, [page, selectcategory, order,search]);
+    }, [page, selectcategory, order, debouncedSearch]);
+
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedSearch(search);
+        }, 1500);
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [search]);
 
     const handlePrevPage = () => {
         if (page > 1) {
@@ -128,3 +138,6 @@ const Product = () => {
 };
 
 export default Product;
+
+
+

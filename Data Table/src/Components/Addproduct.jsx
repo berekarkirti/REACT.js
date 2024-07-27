@@ -12,7 +12,6 @@ const initialstate={
     description:"",
     category:"",
     image:""
-
 }
 
 const Addproduct = () => {

@@ -207,7 +207,7 @@
     {
       "id": "19",
       "title": "Opna Women's Short Sleeve Moisture",
-      "price": 7.95,
+      "price": "20",
       "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
@@ -363,7 +363,7 @@
     {
       "id": "33",
       "title": "Digital Kitchen Scale",
-      "price": 15.99,
+      "price": "20",
       "description": "Accurate and easy-to-use digital kitchen scale. Ideal for precise cooking and baking measurements. Compact design with a clear LCD display.",
       "category": "home and kitchen",
       "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
@@ -471,6 +471,14 @@
       "category": "electronics",
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRHRb3zaPNGVvqnfsME6PDwgcd6sGH6Q_DCKnJsdXsA_L0t4z0fhubSJ72rKkgIEPJiYv9yDS7a_oG0rSOAwDl-RbbrPs5JkmOMYmt7A1nbsuWppAAuhiIrRlJ-&usqp=CAE",
       "id": "3-K2NiF"
+    },
+    {
+      "title": "watch",
+      "price": "4,56,784",
+      "description": "dfgsyuhxikjn",
+      "category": "electronics",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR1u2WFvg0hGYhzhZrql4LqakTQU2YNXhaB66aO5Y1-8uvJf25J7yF1VtGtojWjU58L5aWpgv82nXyIbc0aQMrwFUIYduUEcaykXHnjn00&usqp=CAE",
+      "id": "4RcX8zG"
     }
   ],
   "deletedProducts": [

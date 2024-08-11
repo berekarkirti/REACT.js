@@ -1,0 +1,25 @@
+.home-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .Home-class{
+    color: #1F4959; 
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .home-container p {
+    font-size: 22px;
+    color:  #1F4959;
+    max-width: 900px;
+    margin: 0 auto 20px auto; 
+    line-height: 1.6; 
+    text-align: justify; 
+  }
+  
+  .home-container b {
+    font-weight: bold;
+    font-size: 26px;
+    color:  #1F4959;
+  }
+  

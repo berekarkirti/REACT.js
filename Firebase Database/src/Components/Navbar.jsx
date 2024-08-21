@@ -20,8 +20,8 @@ const Navbar = () => {
     }}>
        <NavLink style={linkStyle} to="/">Home</NavLink>
        <NavLink style={linkStyle} to="/about">About</NavLink>
-      <NavLink style={linkStyle} to="/dashboard">Dashboard</NavLink>
-      <NavLink style={linkStyle} to="/login">
+       <NavLink style={linkStyle} to="/dashboard">Dashboard</NavLink>
+       <NavLink style={linkStyle} to="/login">
         <FaUser style={{ marginRight: '5px' }} /> Login 
       </NavLink>
     </div>

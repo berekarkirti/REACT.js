@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth"; 
+import { setLogLevel } from "firebase/app";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBI77ThAWF1lOa9Qxbb_VVW7B-9t6PiouI",

@@ -4,7 +4,7 @@
     border:1.7px solid #1F4959;
     border-radius: 10px;
     box-shadow: 0 4px 8px #1f4959c7;
-    height: 400px;
+    height: 500px;
     max-width: 400px;
     width: 100%;
     margin: auto;
@@ -29,10 +29,10 @@
 }
 
 .login-input {
-    padding: 0.4rem;
+    padding: 0.6rem;
     margin-bottom: 1rem;
     border: 1px solid #1F4959;
-    border-radius: 5px;
+    border-radius: none;
     font-size: 1rem;
 }
 
@@ -43,7 +43,7 @@
     border: none;
     font-weight: 600;
     margin-top: 4%;
-    border-radius: 5px;
+    border-radius: none;
     cursor: pointer;
     width: 100%; 
     max-width: 600px;

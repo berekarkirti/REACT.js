@@ -1,6 +1,3 @@
-
-
-// Defines the routing configuration for the application.;
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
@@ -16,7 +13,7 @@ const AllRoutes = () => {
   return (
     <Routes>
 
-          {/* Renders the Home,About,Login,Product,ProductDetail,Addproduct,Editpage,NotFound component. */}
+          {/* Renders the Home,About,Login,Product,Addproduct,Editpage,NotFound component. */}
 
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

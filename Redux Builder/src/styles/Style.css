@@ -40,12 +40,12 @@ h1 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.light {
-    background-color: #ffffff;
-    color: #000000;
+.light_theme {
+    color: black;
+    background-color: white;
 }
 
-.dark {
-    background-color: #000000;
-    color: #ffffff;
+.dark_theme {
+    color: white;
+    background-color: black;
 }

@@ -1,0 +1,51 @@
+/* ---------------counter--------------- */
+.counter-main {
+    border: 5px solid black;
+    height: 500px;
+    width: 660px;
+    margin-top: 5%;
+    padding: 50px 100px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+h1 {
+    margin-top: 18%;
+}
+
+.counter-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.counter-buttons button {
+    margin-top: 10%;
+    padding: 18px 80px;
+    border: 2px solid gray;
+    border-radius: 0;
+    font-size: 25px;
+}
+
+/* ---------------theme--------------- */
+.theme-main {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.theme-main button {
+    padding: 20px 60px;
+    border: 2px solid gray;
+    border-radius: 0;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark {
+    background-color: #000000;
+    color: #ffffff;
+}

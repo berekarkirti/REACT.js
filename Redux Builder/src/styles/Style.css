@@ -5,7 +5,7 @@
     width: 660px;
     margin-top: 5%;
     padding: 50px 100px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
@@ -37,7 +37,7 @@ h1 {
     border: 2px solid gray;
     border-radius: 0;
     font-size: 16px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .light {

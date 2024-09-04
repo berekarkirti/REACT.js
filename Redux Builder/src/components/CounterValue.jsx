@@ -6,7 +6,7 @@ const CounterValue = () => {
 
   return (
     <div>
-      <hr></hr>
+      <h1>Counter : {counter}</h1>
     </div>
   );
 };

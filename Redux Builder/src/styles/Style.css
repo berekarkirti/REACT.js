@@ -36,6 +36,7 @@ h1 {
     padding: 20px 60px;
     border: 2px solid gray;
     border-radius: 0;
+    background-color: rgba(158, 155, 155, 0.175);
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s;
 }

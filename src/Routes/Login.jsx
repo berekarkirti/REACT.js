@@ -18,6 +18,7 @@ function Login() {
       email,
       password
     };
+    // console.log(userdata);
 
     axios.post("https://reqres.in/api/login", userdata)
       .then((res) => {

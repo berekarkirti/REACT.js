@@ -1,0 +1,15 @@
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import AuthProvider from './Context/AuthContext';
+import App from "./App";
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+  <AuthProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </AuthProvider>
+);
